@@ -34,3 +34,7 @@ bcrypt = Bcrypt(app=app)
 api = Api(app=app)
 
 CORS(app)
+
+# @app.route("/")
+# def index():
+#     return "<h1>Dog Adoption Website</h1>"
