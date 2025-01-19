@@ -8,9 +8,12 @@ const DogList = () => {
   const dogCards = dogs.map(dog => <DogCard key={ dog.id } dog={dog} deleteDog={deleteDog}/>)
 
   return (
-    <div>
-      <h2>Would you like to adopt one of the dogs below?:</h2>
+    <div className='allbutnavbarandcard'>
+    <h2>Would you like to adopt one of the dogs below?</h2>
+
+    <div className='row'>
       { dogCards }
+    </div>
     </div>
   )
 }

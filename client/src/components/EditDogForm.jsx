@@ -49,7 +49,7 @@ const EditDogForm = () => {
       })
     
     return (
-        <div>
+        <div className='allbutnavbarandcard'>
           <h2>Edit {dog.name}</h2>
           <form onSubmit={ formik.handleSubmit }>
             <div>
@@ -68,7 +68,7 @@ const EditDogForm = () => {
                 { formik.errors.image ? <p style={{ color: "red"}}>{ formik.errors.image}</p> : null } 
             </div><br />
                     
-            <input type="submit" value="Update Dog" />
+            <input type="submit" className='submitbutton' value="Update Dog" />
           </form>
         </div>
         ) 

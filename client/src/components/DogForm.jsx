@@ -20,7 +20,7 @@ const DogForm = () => {
     breed: yup.string().required(),
     image: yup.string().required(),
     owner_name: yup.string().required(),
-    adoption_location_name: yup.string().required()
+    adoption_location_name: yup.string().required("Adoption location is a required field.")
   })
 
 
@@ -36,7 +36,7 @@ const DogForm = () => {
   })
 
   return (
-    <div>
+    <div className='allbutnavbarandcard'>
       <h2>Add a dog below:</h2>
       <form onSubmit={ formik.handleSubmit }>
         <div>
@@ -55,17 +55,17 @@ const DogForm = () => {
             { formik.errors.image ? <p style={{ color: "red"}}>{ formik.errors.image}</p> : null } 
         </div><br />
         <div>
-            <label htmlFor="owner_name">Current Owner(If there is no current owner. Type None): </label>
+            <label htmlFor="owner_name">Current Owner (If there is no current owner. Type: None): </label>
             <input type="text" name="owner_name" id="owner_name" value={ formik.values.owner_name } onChange={ formik.handleChange } />
             { formik.errors.owner_name ? <p style={{ color: "red"}}>{ formik.errors.owner_name}</p> : null } 
         </div><br />
         <div>
-            <label htmlFor="adoption_location_name">Current Location (If the location is unknown. Type Unknown): </label>
+            <label htmlFor="adoption_location_name">Current Location (If the location is unknown. Type: Unknown): </label>
             <input type="text" name="adoption_location_name" id="adoption_location_name" value={ formik.values.adoption_location_name } onChange={ formik.handleChange } />
             { formik.errors.adoption_location_name ? <p style={{ color: "red"}}>{ formik.errors.adoption_location_name}</p> : null } 
         </div><br />
         
-        <input type="submit" value="Add a Dog" />
+        <input type="submit" className='submitbutton' value="Add a Dog" />
       </form>
     </div>
   )

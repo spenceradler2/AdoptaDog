@@ -17,18 +17,21 @@ const DogCard = ({ dog,deleteDog }) => {
     
 
   return (
-    <div>
+    <div >
     <br></br>
+    <br></br>
+    <div className='column'>
+    <div className='card'>
       <img src= {dog.image} alt="Dog image did not load"/> 
       <p>Name: {dog.name}</p>
       <p>Breed: {dog.breed}</p>
       <p>Current Owner: {dog.owner.name}</p>
       <p>Current Location: {dog.adoption_location.name}</p>
-      <button onClick={handleDelete}>Adopt Dog</button>
+      <button className= "cardbutton" onClick={handleDelete}>Adopt Dog</button>
       <br></br>
-      <br></br>
-      <button onClick={handleEdit}>Edit Dog</button>
-
+      <button className= "cardbutton" onClick={handleEdit}>Edit Dog</button>
+      </div>
+    </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
 
   return (
-    <div className='home'>
+    <div className='allbutnavbarandcard'>
       <h1>Welcome to AdoptaDog</h1>
       <h3>About: This is a website where you can adopt a dog!</h3>
       <h4>Features:</h4>
